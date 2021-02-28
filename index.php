@@ -43,5 +43,8 @@ $sorgu = $db->query("select * from siparis where kod like '%$getir%'",PDO::FETCH
     while ($cikti = $sorgu->fetch(PDO::FETCH_ASSOC)) {
         echo "".$cikti['iletisim']. "";
 
-*/
+--------------------------------------------------------------------
+
+$sorguab = $db->query("UPDATE bot SET vote = '$sonuc' WHERE botid = '$get' ");
 ?>
+*/
