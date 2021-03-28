@@ -8,7 +8,7 @@ $sifre = ""; //sifre
 $db = "";//veritabani ismi 
 
 try {
-     $db = new PDO("mysql:host=$host;dbname=$db;charset=utf8", "$kullanici", "$sifre");
+     $db = new PDO("mysql:host=$host;dbname=$db;charset=utf8mb4", "$kullanici", "$sifre");
 } catch ( PDOException $e ){
      print $e->getMessage();
 }
