@@ -33,6 +33,14 @@ if($kontrola->rowCount()){
 $sorgu = $db->prepare("insert into linkler (test) values ('$test')");
 
 $sorgu->execute();
+
+
+//---------------------------------------------------------------------------
+
+    $stmt=$db->prepare("DELETE FROM siparis WHERE id=:id");
+    $result=$stmt->execute([
+        ":id" => $degisken
+    ]);
 ----------------------------------------------------------------------------
 
 
