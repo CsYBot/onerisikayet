@@ -54,5 +54,10 @@ $sorgu = $db->query("select * from siparis where kod like '%$getir%'",PDO::FETCH
 --------------------------------------------------------------------
 
 $sorguab = $db->query("UPDATE bot SET vote = '$sonuc' WHERE botid = '$get' ");
+
+
+--------------------------------------------------------------------
+
+header('Location: https://www.csylist.cf');
 ?>
 */
