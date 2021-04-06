@@ -1,6 +1,19 @@
 <?php
 //-----------------------------------------------------------------
 /*
+
+$sorgu = $db->prepare("SELECT * FROM siparis");
+    $sorgu->execute();
+    while ($cikti = $sorgu->fetch(PDO::FETCH_ASSOC)) {
+echo "test: ".$cikti['iletisim']. "";
+$varmi = "var";
+    }
+
+
+
+//-----------------------------------------------------------------
+
+
 $verialmakicin = "Beklemede";
 
     $sorgu = $db->prepare("SELECT * FROM siparis WHERE durum=:duruma Order By tarih DESC");
