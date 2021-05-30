@@ -78,7 +78,7 @@ echo "adminsin";
 
 
 
-$sorgu = $db->query("select * from siparis where kod like '%$getir%'",PDO::FETCH_ASSOC);
+$sorgu = $db->prepare("select * from siparis where kod like '%$getir%'");
     $sorgu->execute();
 
     while ($cikti = $sorgu->fetch(PDO::FETCH_ASSOC)) {
@@ -86,7 +86,7 @@ $sorgu = $db->query("select * from siparis where kod like '%$getir%'",PDO::FETCH
 
 --------------------------------------------------------------------
 
-$sorguab = $db->query("UPDATE bot SET vote = '$sonuc' WHERE botid = '$get' ");
+$sorguab = $db->prepare("UPDATE bot SET vote = '$sonuc' WHERE botid = '$get'");
 
 
 --------------------------------------------------------------------
